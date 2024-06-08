@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff" />
+  <title>GE CoPilot™</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <button id="btn">TOGGLE BUTTON</button>
+  <p id="para">Light Theme</p>
+
+  <!-- TOGGLE BUTTON CSS CODE -->
+  <style>
+    #btn{
+      margin-left: 40%;
+      margin-top: 15%;
+      height: 100px;
+      width: 200px;
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+      font-size: large;
+      border-radius: 10%;
+    }
+    #para{
+      margin-left: 41%;
+      margin-top: 10%;
+      font-size: xx-large;
+    }
+  </style>
+
+<!-- TOGGLE BUTTON JS CODE -->
+  <script>
+    let a=document.querySelector("#btn")
+let body=document.querySelector("body")
+let para=document.querySelector("#para")
+count=0;
+a.addEventListener("click",function(){
+    count++;
+    if(count%2!=0){body.style.backgroundColor="Black";
+        para.style.color="white";
+        para.innerText="Dark Theme"
+        console.log("Dark Mode")
+    }
+    else
+    {body.style.backgroundColor="white";
+           para.style.color="black";
+        para.innerText="Light Theme"
+        console.log("Light Mode")
+    }
+})
+  </script>
+
+
+  <script type="module" src="/src/main.jsx"></script>
+ 
+</body>
+
+</html>
